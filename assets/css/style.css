@@ -1,0 +1,114 @@
+.container {
+  background-image: url("../images/bubbles.svg");
+  width: 100vh;
+  background-size: cover;
+}
+
+
+.logo {
+  width: 60%;
+  margin: auto;
+  display: grid;
+  place-items: center;
+}
+
+.head, .body {
+  fill: green;
+}
+
+
+
+.legs, .arm {
+  fill: purple;
+}
+
+.ant {
+  fill: orange;
+}
+
+.eyes {
+  fill: red;
+}
+
+.body, .head {
+  animation-name: jiggle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateX(2px);
+    transform-origin: center;
+    filter:drop-shadow(1px 1px 10px red);
+  }
+  50% {
+    transform: translateX(-2px);
+    transform-origin: center;
+    filter:drop-shadow(1px 1px 10px purple);
+  }
+  100% {
+    transform: translateX(2px);
+    transform-origin: center;
+    filter:drop-shadow(1px 1px 10px red);
+  }
+}
+
+.arm, .legs, .ant, .eyes {
+  animation-name: dance;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(5deg);
+    transform-origin: center;
+  }
+  50% {
+    transform: rotate(-5deg);
+    transform-origin: center;
+  }
+  100% {
+    transform: rotate(5deg);
+    transform-origin: center;
+  }
+}
+
+.body:hover ~ .arm {
+  transform: rotate(5deg);
+  transform-origin: center;
+}
+
+.body:hover ~ .legs {
+  transform: rotate(5deg);
+  transform-origin: center;
+}
+
+.body:hover ~ .ant {
+  transform: rotate(5deg);
+  transform-origin: center;
+}
+
+.body:hover ~ .eyes {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+
+
+.head:hover ~ .arm {
+  transform: rotate(-5deg);
+  transform-origin: center;
+}
+
+.head:hover ~ .legs {
+  transform: rotate(-5deg);
+  transform-origin: center;
+}
+
+.head:hover ~ .ant {
+  transform: rotate(-5deg);
+  transform-origin: center;
+}
+
